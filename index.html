@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal website</title>
+    <style>
+        /* ===== Generated Design Styles ===== */
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #ffffff; }
+        .sketch-canvas { max-width: 1100px; width: 100%; margin: 0 auto; overflow-x: hidden; }
+        .sketch-canvas img { max-width: 100%; }
+        @font-face { font-family: "DoppioOne-Regular"; src: url("fonts/DoppioOne_Regular.ttf"); font-display: swap; }
+        @font-face { font-family: "BlackOpsOne-Regular"; src: url("fonts/BlackOpsOne_Regular.ttf"); font-display: swap; }
+        #header_1788404480254 { position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; min-height: 30px; background-color: #1e88e5; padding: 10px 24px; }
+        #header_1788404480254 .header-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+        #header_1788404480254 .logo-img { height: 42px; width: auto; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
+        #header_1788404480254 .header-text { color: #ffffff; font-size: 14px; font-family: BlackOpsOne-Regular; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        #header_1788404480254 .menu-toggle { display: flex; align-items: center; gap: 8px; background: none; border: none; cursor: pointer; padding: 6px 4px; flex-shrink: 0; }
+        #header_1788404480254 .menu-toggle .menu-label { color: #ffffff; font-size: 14px; font-family: BlackOpsOne-Regular; font-weight: 600; }
+        #header_1788404480254 .hamburger-icon { display: flex; flex-direction: column; gap: 4px; }
+        #header_1788404480254 .hamburger-icon span { display: block; width: 24px; height: 3px; background-color: #ffffff; border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+        #header_1788404480254 .nav-menu { display: flex; flex-direction: column; position: absolute; top: 100%; right: 24px; margin-top: 8px; background-color: #1e88e5; border-radius: 8px; overflow: hidden; z-index: 50; box-shadow: 0 6px 18px rgba(0,0,0,0.2); min-width: 180px; max-width: min(90vw, 320px); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease; pointer-events: none; }
+        #header_1788404480254 .nav-menu.open { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+        #header_1788404480254 .nav-menu a { color: #ffffff; font-size: 14px; font-family: BlackOpsOne-Regular; text-decoration: none; font-weight: 600; cursor: pointer; padding: 12px 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        #header_1788404480254 .nav-menu a:hover { background-color: rgba(255,255,255,0.15); }
+        @media (max-width: 480px) {
+            #header_1788404480254 .nav-menu { left: 16px; right: 16px; min-width: 0; max-width: none; }
+        }
+        #skills_1788404974984 { background-color: #f7f7f7; padding: 48px 20px; text-align: center; }
+        #skills_1788404974984 img { max-width: 280px; width: 100%; height: auto; border-radius: 70px; object-fit: cover; }
+        #skills_1788404974984 p { color: #000000; font-size: 10px; font-family: DoppioOne-Regular; max-width: 600px; margin: 18px auto 0; line-height: 1.6; }
+        #section_1788404735527 { background-color: #1e88e5; padding: 48px 20px; text-align: center; }
+        #section_1788404735527 h2 { color: #ffffff; font-size: 26px; font-family: DoppioOne-Regular; margin: 0 0 12px 0; }
+        #section_1788404735527 p { color: #FDFDFD; font-size: 10px; font-family: DoppioOne-Regular; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+        #text_1788405747394_wrap { width: 100%; height: 40px; background-color: #ffffff; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 0px; margin: 0px auto; }
+        #text_1788405747394 {
+            width: 100%;
+            color: #000000;
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            font-size: 20px;
+            font-family: DoppioOne-Regular;
+            text-align: center;
+            box-sizing: border-box;
+            opacity: 1.0;
+        }
+        #services_1788405183098 { background-color: #ffffff; padding: 44px 20px; }
+        #services_1788405183098 .services-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: 8px; }
+        #services_1788405183098 .services-track::-webkit-scrollbar { height: 0; }
+        #services_1788405183098 .service-card { flex: 0 0 220px; scroll-snap-align: start; background-color: #1e88e5; border-radius: 10px; padding: 20px; box-sizing: border-box; }
+        #services_1788405183098 .service-card h3 { color: #ffffff; font-size: 18px; font-family: DoppioOne-Regular; margin: 0 0 8px 0; }
+        #services_1788405183098 .service-card p { color: #FDFDFD; font-size: 13px; font-family: DoppioOne-Regular; margin: 0; line-height: 1.5; }
+        #text_1788405904659_wrap { width: 100%; height: 30px; background-color: #1e88e5; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 0px; margin: 0px auto; }
+        #text_1788405904659 {
+            width: 100%;
+            color: #ffffff;
+            background-color: #1e88e5;
+            border: 1px solid #1e88e5;
+            border-radius: 4px;
+            font-size: 20px;
+            font-family: DoppioOne-Regular;
+            text-align: center;
+            box-sizing: border-box;
+            opacity: 1.0;
+        }
+        #portfolio_1788405318787 { background-color: #1e88e5; padding: 44px 20px; }
+        #portfolio_1788405318787 .portfolio-row { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; }
+        #portfolio_1788405318787 .project-card { flex: 0 1 240px; background-color: #ffffff; border-radius: 10px; padding: 18px; text-decoration: none; display: block; box-sizing: border-box; transition: transform .2s ease; }
+        #portfolio_1788405318787 .project-card:hover { transform: translateY(-4px); }
+        #portfolio_1788405318787 .project-card h3 { color: #1e88e5; font-size: 18px; font-family: DoppioOne-Regular; margin: 0 0 8px 0; }
+        #portfolio_1788405318787 .project-card p { color: #000000; font-size: 13px; font-family: DoppioOne-Regular; margin: 0 0 8px 0; line-height: 1.5; }
+        #portfolio_1788405318787 .project-card .project-link { display: inline-block; color: #1e88e5; font-size: 13px; font-family: DoppioOne-Regular; text-decoration: underline; margin: 0; }
+        #testimonials_1788405649946 { background-color: #ffffff; padding: 30px 20px; }
+        #testimonials_1788405649946 .testimonials-viewport { max-width: 420px; margin: 0 auto; height: 160px; overflow: hidden; position: relative; }
+        #testimonials_1788405649946 .testimonials-track { display: flex; flex-direction: column; transition: transform .6s ease; }
+        #testimonials_1788405649946 .testimonial-card { height: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 12px; box-sizing: border-box; }
+        #testimonials_1788405649946 .testimonial-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; background: #ddd; }
+        #testimonials_1788405649946 .testimonial-name { color: #1e88e5; font-size: 15px; font-family: DoppioOne-Regular; font-weight: 600; margin-bottom: 6px; }
+        #testimonials_1788405649946 .testimonial-feedback { color: #555555; font-size: 13px; font-family: DoppioOne-Regular; line-height: 1.5; }
+        #contact_1788405485893 { background-color: #ffffff; padding: 44px 20px; text-align: center; }
+        #contact_1788405485893 h2 { color: #1e88e5; font-size: 24px; font-family: DoppioOne-Regular; margin: 0 0 10px 0; }
+        #contact_1788405485893 p { color: #000000; font-size: 14px; font-family: DoppioOne-Regular; max-width: 560px; margin: 0 auto 22px; line-height: 1.6; }
+        #contact_1788405485893 .contact-form { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; max-width: 460px; margin: 0 auto; }
+        #contact_1788405485893 .contact-form input[type=email] { flex: 1 1 220px; padding: 12px 14px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; font-family: DoppioOne-Regular; }
+        #contact_1788405485893 .contact-form button { padding: 12px 22px; border: none; border-radius: 6px; background-color: #1565c0; color: #ffffff; font-weight: 600; font-family: DoppioOne-Regular; cursor: pointer; }
+        #contact_1788405485893 .contact-form button:hover { opacity: 0.9; }
+        #footer_1788405565794 { background-color: #1e88e5; color: #ffffff; font-size: 12px; font-family: DoppioOne-Regular; text-align: center; padding: 20px 12px; }
+    </style>
+</head>
+<body>
+    <div class="sketch-canvas">
+        <header id="header_1788404480254">
+            <div class="header-left">
+                <img class="logo-img" src="images/image_1.png" alt="logo" />
+            </div>
+            <button type="button" class="menu-toggle" id="header_1788404480254_menu_btn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="header_1788404480254_menu">
+                <span class="menu-label">Menu</span>
+                <span class="hamburger-icon"><span></span><span></span><span></span></span>
+            </button>
+            <nav class="nav-menu" id="header_1788404480254_menu">
+                <a href="#home" data-scroll-target="home">Home</a>
+                <a href="#about" data-scroll-target="about">About</a>
+                <a href="#elem" data-scroll-target="elem">Service</a>
+                <a href="#elem" data-scroll-target="elem">Portfolio </a>
+                <a href="#elem" data-scroll-target="elem">contact</a>
+                <a href="#elem" data-scroll-target="elem">fotter</a>
+            </nav>
+        </header>
+        <section id="skills_1788404974984">
+            <img src="images/image_2.png" alt="profile" />
+            <p>Welcome to My Personal Digital Platform.</p>
+        </section>
+        <section id="section_1788404735527">
+            <h2>Home</h2>
+            <p>Welcome to My Personal Digital Platform.
+​Tagline: Physics student, mobile and web application developer, combining rigorous scientific analysis with software creativity to build practical digital solutions and exceptional user experiences.</p>
+        </section>
+        <div id="text_1788405747394_wrap" class="widget-container">
+            <p id="text_1788405747394">Service</p>
+        </div>
+        <section id="services_1788405183098" class="services-section">
+            <div class="services-track">
+                <div class="service-card">
+                    <h3>Service One</h3>
+                    <p>A short description of this service.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Service Two</h3>
+                    <p>A short description of this service.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Service Three</h3>
+                    <p>A short description of this service.</p>
+                </div>
+                <div class="service-card">
+                    <h3>New Service</h3>
+                    <p>udhdhdyde7e7</p>
+                </div>
+            </div>
+        </section>
+        <div id="text_1788405904659_wrap" class="widget-container">
+            <p id="text_1788405904659">portfolio</p>
+        </div>
+        <section id="portfolio_1788405318787" class="portfolio-section">
+            <div class="portfolio-row">
+                <a class="project-card" href="https://" target="_blank" rel="noopener">
+                    <h3>Project One</h3>
+                    <p>A short project description.</p>
+                    <span class="project-link">Click here to view the project</span>
+                </a>
+                <a class="project-card" href="https://" target="_blank" rel="noopener">
+                    <h3>Project Two</h3>
+                    <p>A short project description.</p>
+                    <span class="project-link">Click here to view the project</span>
+                </a>
+                <a class="project-card" href="https://" target="_blank" rel="noopener">
+                    <h3>New Project</h3>
+                    <p>Hiya dad is this picture </p>
+                    <span class="project-link">Click here to view the project</span>
+                </a>
+            </div>
+        </section>
+        <section id="testimonials_1788405649946" class="testimonials-section">
+            <div class="testimonials-viewport">
+                <div class="testimonials-track">
+                    <div class="testimonial-card">
+                        <img class="testimonial-photo" src="images/image_3.jpg" alt="" />
+                        <div class="testimonial-name">Jane Doe</div>
+                        <div class="testimonial-feedback">This service was fantastic!</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img class="testimonial-photo" src="images/image_4.jpg" alt="" />
+                        <div class="testimonial-name">John Smith</div>
+                        <div class="testimonial-feedback">Highly recommend to everyone.</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img class="testimonial-photo" src="images/image_5.png" alt="" />
+                        <div class="testimonial-name">New Customer</div>
+                        <div class="testimonial-feedback">ueurheheh</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact_1788405485893" class="contact-section">
+            <h2>Get In Touch</h2>
+            <p>Leave your email and we will get back to you.</p>
+            <div class="contact-form">
+                <input type="email" id="contact_1788405485893_email" placeholder="Your email address" />
+                <button type="button" id="contact_1788405485893_btn">Send Email</button>
+            </div>
+        </section>
+        <footer id="footer_1788405565794">© 2026 My Website. All rights reserved.</footer>
+    </div>
+    <script>
+        (function(){
+            var btn = document.getElementById('header_1788404480254_menu_btn');
+            var menu = document.getElementById('header_1788404480254_menu');
+            if (!btn || !menu) return;
+            function closeMenu() {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+            function toggleMenu(e) {
+                e.stopPropagation();
+                var isOpen = menu.classList.toggle('open');
+                btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
+            btn.addEventListener('click', toggleMenu);
+            menu.querySelectorAll('a').forEach(function(a){
+                a.addEventListener('click', function(e){
+                    e.preventDefault();
+                    closeMenu();
+                    var targetId = a.getAttribute('data-scroll-target');
+                    var targetEl = targetId ? document.getElementById(targetId) : null;
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+            document.addEventListener('click', function(e){
+                if (!menu.contains(e.target) && e.target !== btn) closeMenu();
+            });
+            document.addEventListener('keydown', function(e){
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
+        (function(){
+            var track = document.querySelector('#services_1788405183098 .services-track');
+            if (!track) return;
+            var autoplayMs = 1.5 * 1000;
+            var paused = false, resumeTimer = null;
+            function next(){
+                if (paused) return;
+                var card = track.querySelector('.service-card');
+                var step = card ? card.offsetWidth + 16 : 220;
+                if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
+                    track.scrollTo({left: 0, behavior: 'smooth'});
+                } else {
+                    track.scrollBy({left: step, behavior: 'smooth'});
+                }
+            }
+            setInterval(next, autoplayMs);
+            function onManual(){
+                paused = true;
+                clearTimeout(resumeTimer);
+                resumeTimer = setTimeout(function(){ paused = false; }, autoplayMs);
+            }
+            track.addEventListener('touchstart', onManual, {passive: true});
+            track.addEventListener('mousedown', onManual);
+            track.addEventListener('wheel', onManual, {passive: true});
+        })();
+        (function(){
+            var track = document.querySelector('#testimonials_1788405649946 .testimonials-track');
+            var viewport = document.querySelector('#testimonials_1788405649946 .testimonials-viewport');
+            if (!track || !viewport) return;
+            var count = track.children.length;
+            if (count <= 1) return;
+            var index = 0;
+            setInterval(function(){
+                index = (index + 1) % count;
+                track.style.transform = 'translateY(' + (-index * viewport.offsetHeight) + 'px)';
+            }, 2000);
+        })();
+        (function(){
+            var btn = document.getElementById('contact_1788405485893_btn');
+            var input = document.getElementById('contact_1788405485893_email');
+            if (!btn) return;
+            btn.addEventListener('click', function(){
+                var visitor = input ? input.value.trim() : '';
+                var subject = encodeURIComponent('New message from your website');
+                var body = encodeURIComponent('From: ' + (visitor || '(no email provided)') + '\n\n');
+                window.location.href = 'mailto:you@example.com?subject=' + subject + '&body=' + body;
+            });
+        })();
+    </script>
+</body>
+</html>

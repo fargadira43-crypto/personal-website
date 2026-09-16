@@ -94,14 +94,14 @@
     <div class="sketch-canvas">
         <header id="header_1788404480254">
             <div class="header-left">
-                <img class="logo-img" src="images/image_1.png" alt="logo" />
+                <img class="logo-img" src="images/imge_1.png" alt="logo" />
             </div>
             <button type="button" class="menu-toggle" id="header_1788404480254_menu_btn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="header_1788404480254_menu">
                 <span class="menu-label">Menu</span>
                 <span class="hamburger-icon"><span></span><span></span><span></span></span>
             </button>
             <nav class="nav-menu" id="header_1788404480254_menu">
-                <a href="#skills_1788404974984" data-scroll-target="skills_1788404974984">Home</a>
+                <a href="#home" data-scroll-target="home">Home</a>
                 <a href="#about" data-scroll-target="about">About</a>
                 <a href="#elem" data-scroll-target="elem">Service</a>
                 <a href="#elem" data-scroll-target="elem">Portfolio </a>
@@ -196,50 +196,36 @@
     </div>
     <script>
         (function(){
-            function initMenu() {
-                var btn = document.getElementById('header_1788404480254_menu_btn');
-                var menu = document.getElementById('header_1788404480254_menu');
-                if (!btn || !menu) return false;
-                if (btn.dataset.initialized) return true;
-                btn.dataset.initialized = 'true';
-                function closeMenu() {
-                    menu.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                }
-                function toggleMenu(e) {
-                    e.stopPropagation();
-                    var isOpen = menu.classList.toggle('open');
-                    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-                }
-                btn.addEventListener('click', toggleMenu);
-                menu.querySelectorAll('a').forEach(function(a){
-                    a.addEventListener('click', function(e){
-                        e.preventDefault();
-                        closeMenu();
-                        var targetId = a.getAttribute('data-scroll-target');
-                        var targetEl = targetId ? document.getElementById(targetId) : null;
-                        if (targetEl) {
-                            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                    });
-                });
-                document.addEventListener('click', function(e){
-                    if (!menu.contains(e.target) && e.target !== btn) closeMenu();
-                });
-                document.addEventListener('keydown', function(e){
-                    if (e.key === 'Escape') closeMenu();
-                });
-                return true;
+            var btn = document.getElementById('header_1788404480254_menu_btn');
+            var menu = document.getElementById('header_1788404480254_menu');
+            if (!btn || !menu) return;
+            function closeMenu() {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
             }
-            if (!initMenu()) {
-                var attempts = 0;
-                var timer = setInterval(function() {
-                    attempts++;
-                    if (initMenu() || attempts > 20) {
-                        clearInterval(timer);
+            function toggleMenu(e) {
+                e.stopPropagation();
+                var isOpen = menu.classList.toggle('open');
+                btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
+            btn.addEventListener('click', toggleMenu);
+            menu.querySelectorAll('a').forEach(function(a){
+                a.addEventListener('click', function(e){
+                    e.preventDefault();
+                    closeMenu();
+                    var targetId = a.getAttribute('data-scroll-target');
+                    var targetEl = targetId ? document.getElementById(targetId) : null;
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
-                }, 100);
-            }
+                });
+            });
+            document.addEventListener('click', function(e){
+                if (!menu.contains(e.target) && e.target !== btn) closeMenu();
+            });
+            document.addEventListener('keydown', function(e){
+                if (e.key === 'Escape') closeMenu();
+            });
         })();
         (function(){
             var track = document.querySelector('#services_1788405183098 .services-track');
